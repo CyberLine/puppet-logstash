@@ -13,6 +13,7 @@ HOSTS:
       - apt-get install -yq -t jessie-backports openjdk-8-jre-headless ca-certificates-java
       - REALLY_GEM_UPDATE_SYSTEM=1 gem update --system --no-ri --no-rdoc
     docker_preserve_image: true
+
 CONFIG:
   type: foss
   :trace_limit: 100  # Get more than 10 lines of trace when something fails.

@@ -20,6 +20,7 @@ HOSTS:
       - apt-get install -yq oracle-java8-installer
       - apt-get install -yq oracle-java8-set-default
     docker_preserve_image: true
+
 CONFIG:
   type: foss
   :trace_limit: 100  # Get more than 10 lines of trace when something fails.
