@@ -23,7 +23,7 @@ script:
       elif [[ -n $TRAVIS_UNIT ]]; then
         bundle exec rake spec
       else
-        bundle exec rspec spec/acceptance
+        bundle exec rake beaker
       fi
     )
 
@@ -42,38 +42,3 @@ env:
     - PUPPET_VERSION=5.2.0 TRAVIS_UNIT=true
     - PUPPET_VERSION=5.3.3 TRAVIS_UNIT=true
     - PUPPET_VERSION=6.0.4 TRAVIS_UNIT=true
-
-    # Then run the acceptance tests across the matrix.
-    - PUPPET_VERSION=5.3.3 BEAKER_set=centos-7
-    - PUPPET_VERSION=5.3.3 BEAKER_set=centos-7 LOGSTASH_VERSION=5.6.4
-    - PUPPET_VERSION=6.0.4 BEAKER_set=centos-7 LOGSTASH_VERSION=5.6.4
-
-    - PUPPET_VERSION=5.3.3 BEAKER_set=centos-8
-    - PUPPET_VERSION=5.3.3 BEAKER_set=centos-8 LOGSTASH_VERSION=5.6.4
-    - PUPPET_VERSION=6.0.4 BEAKER_set=centos-8 LOGSTASH_VERSION=5.6.4
-
-    - PUPPET_VERSION=5.3.3 BEAKER_set=debian-8
-    - PUPPET_VERSION=5.3.3 BEAKER_set=debian-8 LOGSTASH_VERSION=5.6.4
-    - PUPPET_VERSION=6.0.4 BEAKER_set=debian-8 LOGSTASH_VERSION=5.6.4
-
-    - PUPPET_VERSION=5.3.3 BEAKER_set=debian-9
-    - PUPPET_VERSION=5.3.3 BEAKER_set=debian-9 LOGSTASH_VERSION=5.6.4
-    - PUPPET_VERSION=6.0.4 BEAKER_set=debian-9 LOGSTASH_VERSION=5.6.4
-
-    - PUPPET_VERSION=5.3.3 BEAKER_set=debian-10
-
-    - PUPPET_VERSION=6.0.4 BEAKER_set=debian-11
-
-    - PUPPET_VERSION=5.3.3 BEAKER_set=ubuntu-1404
-    - PUPPET_VERSION=5.3.3 BEAKER_set=ubuntu-1404 LOGSTASH_VERSION=5.6.4
-    - PUPPET_VERSION=6.0.4 BEAKER_set=ubuntu-1404 LOGSTASH_VERSION=5.6.4
-
-    - PUPPET_VERSION=5.0.1 BEAKER_set=ubuntu-1604
-    - PUPPET_VERSION=5.1.0 BEAKER_set=ubuntu-1604
-    - PUPPET_VERSION=5.2.0 BEAKER_set=ubuntu-1604
-    - PUPPET_VERSION=5.3.3 BEAKER_set=ubuntu-1604
-    - PUPPET_VERSION=6.0.4 BEAKER_set=ubuntu-1604
-    - PUPPET_VERSION=5.3.3 BEAKER_set=ubuntu-1604 LOGSTASH_VERSION=5.6.4
-    - PUPPET_VERSION=6.0.4 BEAKER_set=ubuntu-1604 LOGSTASH_VERSION=5.6.4
-
-    - PUPPET_VERSION=6.0.4 BEAKER_set=ubuntu-1804
