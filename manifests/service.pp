@@ -138,7 +138,7 @@ class logstash::service {
   # default.
   # Puppet 3 doesn't know that Debian 8 uses systemd, not SysV init, so we'll
   # help it out with our knowledge from the future.
-  elsif($os == 'debian' and $release >= '8') {
+  elsif($os == 'debian') {
     $service_provider = 'systemd'
   }
   # RedHat/CentOS/OEL 6 uses Upstart by default, but Puppet can get confused about this too.

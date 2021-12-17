@@ -3,7 +3,6 @@ require 'net/http'
 require 'pry'
 require 'securerandom'
 require 'yaml'
-require 'sync'
 
 # Collect global options from the environment.
 if ENV['LOGSTASH_VERSION'].nil?
