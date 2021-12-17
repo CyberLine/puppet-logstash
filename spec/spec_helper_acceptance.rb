@@ -20,36 +20,6 @@ else
   IS_PRERELEASE = false
 end
 
-def agent_version_for_puppet_version(puppet_version)
-  # REF: https://docs.puppet.com/puppet/latest/reference/about_agent.html
-  version_map = {
-    # Puppet => Agent
-    '4.9.4' => '1.9.3',
-    '4.8.2' => '1.8.3',
-    '4.8.1' => '1.8.2',
-    '4.8.0' => '1.8.0',
-    '4.7.1' => '1.7.2',
-    '4.7.0' => '1.7.1',
-    '4.6.2' => '1.6.2',
-    '4.6.1' => '1.6.1',
-    '4.6.0' => '1.6.0',
-    '4.5.3' => '1.5.3',
-    '4.4.2' => '1.4.2',
-    '4.4.1' => '1.4.1',
-    '4.4.0' => '1.4.0',
-    '4.3.2' => '1.3.6',
-    '4.3.1' => '1.3.2',
-    '4.3.0' => '1.3.0',
-    '4.2.3' => '1.2.7',
-    '4.2.2' => '1.2.6',
-    '4.2.1' => '1.2.2',
-    '4.2.0' => '1.2.1',
-    '4.1.0' => '1.1.1',
-    '4.0.0' => '1.0.1'
-  }
-  version_map[puppet_version]
-end
-
 def apply_manifest_fixture(manifest_name)
   manifest = File.read("./spec/fixtures/manifests/#{manifest_name}.pp")
   apply_manifest(manifest, catch_failures: true)
@@ -248,15 +218,10 @@ hosts.each do |host|
     on host, "hostname #{host.name}"
     install_pe_on(host, pe_ver: PE_VERSION)
   else
-    if PUPPET_VERSION.start_with?('4.')
-      agent_version = agent_version_for_puppet_version(PUPPET_VERSION)
-      install_puppet_agent_on(host, puppet_agent_version: agent_version)
-    else
-      begin
-        install_puppet_on(host, version: PUPPET_VERSION)
-      rescue
-        install_puppet_from_gem_on(host, version: PUPPET_VERSION)
-      end
+    begin
+      install_puppet_on(host, version: PUPPET_VERSION)
+    rescue
+      install_puppet_from_gem_on(host, version: PUPPET_VERSION)
     end
   end
 
