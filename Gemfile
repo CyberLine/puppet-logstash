@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.3.4'
+ruby '2.7.4'
 
-puppetversion = ENV['PUPPET_VERSION'] || '5.0.1'
+puppetversion = ENV['PUPPET_VERSION'] || '6.25.0'
 gem 'puppet', puppetversion, :require => false
 
 gem 'beaker', '3.15.0'
@@ -15,6 +15,7 @@ gem 'rspec-puppet'
 
 gem 'pry'
 gem 'pry-rescue'
+gem 'deep_merge', '~> 1.1'
 gem 'docker-api', '~> 1.0'
 gem 'rubysl-securerandom'
 gem 'ci_reporter_rspec'
@@ -31,8 +32,8 @@ gem 'puppet-syntax'
 gem 'rspec-puppet-facts'
 gem 'rubocop'
 gem 'semantic_puppet'
-gem 'serverspec', '2.38.0'
-gem 'specinfra', '2.67.3'
+gem 'serverspec'
+gem 'specinfra'
 gem 'syck'
 gem 'webmock'
 gem 'redcarpet'

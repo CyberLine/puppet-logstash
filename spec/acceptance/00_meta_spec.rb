@@ -1,5 +1,4 @@
 require 'spec_helper_acceptance'
-require 'beaker-rspec'
 
 # Here we put the more basic fundamental tests, ultra obvious stuff.
 describe 'puppet' do
