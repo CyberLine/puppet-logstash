@@ -1,4 +1,3 @@
-require 'beaker-rspec'
 require 'net/http'
 require 'pry'
 require 'securerandom'

@@ -23,7 +23,7 @@ script:
       elif [[ -n $TRAVIS_UNIT ]]; then
         bundle exec rake spec
       else
-        bundle exec rake beaker
+        bundle exec rspec spec/acceptance
       fi
     )
 
