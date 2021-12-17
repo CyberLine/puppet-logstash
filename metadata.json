@@ -58,7 +58,8 @@
       "operatingsystemrelease": [
         "14.04",
         "16.04",
-        "18.04"
+        "18.04",
+        "20.04"
       ]
     },
     {
@@ -73,9 +74,5 @@
       "name": "puppet",
       "version_requirement": ">=5.5.0 <8.0.0"
     }
-  ],
-  "description": "Module for managing and configuring Logstash",
-  "pdk-version": "2.3.0",
-  "template-url": "pdk-default#2.3.0",
-  "template-ref": "tags/2.3.0-0-g8aaceff"
+  ]
 }
