@@ -5,7 +5,7 @@ sudo: required
 # It does not affect which OSs we are testing, since they all provided
 # by Docker containers. This simply defines which OS Docker itself will
 # be running on.
-dist: trusty
+dist: focal
 
 services:
   - docker
