@@ -1,11 +1,11 @@
 {
   "name": "elastic-logstash",
   "version": "7.0.0",
-  "author": "elastic",
+  "author": "voxpupuli",
   "summary": "Module for managing and configuring Logstash",
   "license": "Apache-2.0",
   "source": "https://github.com/voxpupuli/puppet-logstash",
-  "project_page": "https://github.com/elastic/puppet-logstash",
+  "project_page": "https://github.com/voxpupuli/puppet-logstash",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
@@ -57,5 +57,8 @@
       "name": "puppet",
       "version_requirement": ">=5.5.0 <8.0.0"
     }
-  ]
+  ],
+  "pdk-version": "2.3.0",
+  "template-url": "pdk-default#2.3.0",
+  "template-ref": "tags/2.3.0-0-g8aaceff"
 }
