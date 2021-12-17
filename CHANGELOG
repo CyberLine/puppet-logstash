@@ -1,3 +1,7 @@
+7.0.0
+  Allow puppetlabs-stdlib 9.x
+  Puppet 6 Support
+
 6.1.5
   Honour `restart_on_change` for startup files #377
 
