@@ -1,16 +1,15 @@
-#	opensuse-121 \
-#       sles-11sp3 \
-
 default: deps lint docs
 
 distros = \
-	centos-6 \
 	centos-7 \
-	debian-7 \
-	debian-8 \
+	centos-8 \
+	debian-9 \
+	debian-10 \
+	debian-11 \
 	opensuse-13 \
-	ubuntu-1204 \
-	ubuntu-1404
+	ubuntu-1604 \
+	ubuntu-1804 \
+	ubuntu-2004
 
 deps: bundle-install puppet-module-deps
 

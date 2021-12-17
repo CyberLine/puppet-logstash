@@ -17,7 +17,7 @@
 #     filename => 'custom-pattern-name'
 #   }
 #
-# @author https://github.com/elastic/puppet-logstash/graphs/contributors
+# @author https://github.com/voxpupuli/puppet-logstash/graphs/contributors
 #
 define logstash::patternfile (
   Pattern[/^(puppet|file):\/\//] $source   = undef,

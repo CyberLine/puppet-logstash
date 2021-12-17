@@ -1,8 +1,8 @@
 HOSTS:
-  debian-8:
+  debian-11:
     roles: [agent, database, dashboard, master]
-    platform: debian-8-amd64
-    image: debian:jessie-backports
+    platform: debian-11-amd64
+    image: debian:bullseye
     hypervisor: docker
     docker_cmd: '["/sbin/init"]'
     docker_image_commands:
@@ -10,7 +10,7 @@ HOSTS:
       - rm /lib/systemd/system/getty.target
       - apt-get update
       - apt-get install -yq apt-transport-https ruby ruby-dev lsb-release wget net-tools libaugeas-dev libaugeas-ruby ntpdate locales-all logrotate
-      - apt-get install -yq -t jessie-backports openjdk-8-jre-headless ca-certificates-java
+      - apt-get install -yq -t openjdk-8-jre-headless ca-certificates-java
       - REALLY_GEM_UPDATE_SYSTEM=1 gem update --system --no-ri --no-rdoc
     docker_preserve_image: true
 CONFIG:

@@ -132,7 +132,7 @@
 #     ]
 #   }
 #
-# @author https://github.com/elastic/puppet-logstash/graphs/contributors
+# @author https://github.com/voxpupuli/puppet-logstash/graphs/contributors
 #
 class logstash(
   $ensure            = 'present',

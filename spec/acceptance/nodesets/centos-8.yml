@@ -1,8 +1,8 @@
 HOSTS:
-  centos-7-x64:
+  centos-8-x64:
     roles: [agent, database, dashboard, master]
-    platform: el-7-x86_64
-    image: centos:7
+    platform: el-8-x86_64
+    image: centos:8
     hypervisor: docker
     docker_cmd: '["/usr/sbin/init"]'
     docker_image_commands:

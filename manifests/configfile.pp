@@ -39,7 +39,7 @@
 #     path    => '/usr/local/etc/logstash/pipeline-2/heartbeat.conf'
 #   }
 #
-# @author https://github.com/elastic/puppet-logstash/graphs/contributors
+# @author https://github.com/voxpupuli/puppet-logstash/graphs/contributors
 #
 define logstash::configfile(
   $content = undef,
