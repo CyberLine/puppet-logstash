@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'puppetlabs_spec_helper/rake_tasks'
 require 'rspec/core/rake_task'
-require 'split'
 
 exclude_paths = [
   'pkg/**/*',
