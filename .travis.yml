@@ -1,7 +1,7 @@
 ---
 sudo: required
 
-# Use Travis' Ubuntu Trusty machines. They have more RAM.
+# Use Travis' Ubuntu Focal machines. They have more RAM.
 # It does not affect which OSs we are testing, since they all provided
 # by Docker containers. This simply defines which OS Docker itself will
 # be running on.
