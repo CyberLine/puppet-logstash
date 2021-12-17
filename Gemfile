@@ -23,6 +23,7 @@ gem 'google-api-client', '0.9.4' # 0.9.5 needs Ruby 2.
 gem 'rgen'
 gem 'rspec', '~> 3.0'
 gem 'rake'
+gem 'split'
 gem 'metadata-json-lint'
 gem 'puppet-doc-lint'
 gem 'puppet-lint'
