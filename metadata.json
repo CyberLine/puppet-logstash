@@ -1,6 +1,6 @@
 {
-  "name": "elastic-logstash",
-  "version": "7.0.0",
+  "name": "puppet-logstash",
+  "version": "8.0.2",
   "author": "voxpupuli",
   "summary": "Module for managing and configuring Logstash",
   "license": "Apache-2.0",
@@ -12,8 +12,8 @@
       "version_requirement": ">=3.2.0 <9.0.0"
     },
     {
-      "name": "elastic/elastic_stack",
-      "version_requirement": ">=6.0.0 <7.0.0"
+      "name": "puppet/elastic_stack",
+      "version_requirement": ">=8.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -26,21 +26,19 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "7",
         "8"
       ]
     },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "9",
-        "10"
+        "10",
+        "11"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "16.04",
         "18.04",
         "20.04"
       ]
